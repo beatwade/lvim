@@ -146,7 +146,7 @@ lvim.plugins = {
 - [Neovim](neovim-install) >= v0.8.0
 
 ```shell
-  brew install neovim --nightly
+  brew install --HEAD neovim 
 ```
 
 - [Rust](rust-install)

@@ -26,8 +26,10 @@ Bamboo
 Bazel
 Bepa
 Bhyve
+Binance
 Bitbucket
 Blankline
+Blockchain
 Bootloader
 Bootsnap
 Bugzilla
@@ -57,6 +59,7 @@ Corosync
 Coursier
 Crossplane
 CrowdIn
+Cryptocurrency
 Cyber
 DDOS
 Dangerfile
@@ -68,6 +71,7 @@ Deserialization
 Deserializer
 DevOps
 Disqus
+Distroless
 Divio
 Dockerfile
 Dockerfiles
@@ -76,14 +80,17 @@ Dockerized
 Dockerizing
 Dpl
 Dreamweaver
+Duqu
 EDR
 ETag
 Ecto
 Elasticsearch
+Ethereum
 Excon
 Exfiltrate
 Facebook
 Falco
+Fargate
 Fastzip
 Figma
 Filebeat
@@ -93,6 +100,7 @@ Floatline
 Flowdock
 Fluentd
 Forgerock
+Frontrunning
 Fugit
 Gantt
 Gemfile
@@ -126,10 +134,13 @@ Haswell
 Helm
 Heroku
 Herokuish
+Heuristical
 Hexo
 HipChat
+Hyperledger
 Iglu
 Immer
+Incentivized
 Ingress
 Inode
 Istio
@@ -148,6 +159,7 @@ Kargadan
 Karma
 Kerberos
 Keycloak
+Keylog
 Keymap
 Kibana
 Kinesis
@@ -184,7 +196,11 @@ Markdown
 Matomo
 Mattermost
 Memorystore
+Merkle
+Metasploit
+Meterpreter
 Microsoft
+Mimikatz
 MinIO
 Minikube
 ModSecurity
@@ -200,6 +216,7 @@ Nginx
 Nokogiri
 Nurtch
 OAuth
+OPSEC
 Octokit
 Okta
 OmniAuth
@@ -217,6 +234,7 @@ Pipfile
 Pipfiles
 Piwik
 Poedit
+Ponzi
 PostgreSQL
 Prettifier
 Pritaly
@@ -270,6 +288,7 @@ Splunk
 SpotBugs
 Stackdriver
 Stackprof
+Stuxnet
 Superblock
 Sysbench
 TODO
@@ -400,6 +419,7 @@ compilable
 composable
 config
 configs
+crackable
 cron
 cronjob
 cronjobs
@@ -410,6 +430,7 @@ crosslinked
 crosslinking
 crosslinks
 crt
+crypto
 cyber
 cybersecurity
 datasource
@@ -519,6 +540,7 @@ jasmine-jquery
 javascript
 jq
 jsdom
+json
 julia
 jumplist
 kanban
@@ -951,6 +973,7 @@ upstreams
 upvote
 upvoted
 upvotes
+utilize
 validator
 validators
 vendored

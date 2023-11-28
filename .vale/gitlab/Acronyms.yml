@@ -15,24 +15,35 @@ second: '(?:\b[A-Z][a-z]+ )+\(([A-Z]{3,5})\)'
 # ... with the exception of these:
 exceptions:
   - ACID
-  - ACK
+  - ACG
   - ACL
+  - ACK
+  - ADFS
   - AJAX
+  - AMSI
   - ANSI
   - API
+  - APT
   - ARM
   - ARN
   - ARP
   - ASCII
+  - ASIC
   - ASLR
   - ASN
   - AWS
   - BAR
+  - BASLR
+  - BCP
+  - BEV
   - BGP
+  - BNB
   - BSD
+  - BYOD
   - CAS
   - CASMM
   - CAM
+  - CCSS
   - CDN
   - CET
   - CFG
@@ -46,6 +57,7 @@ exceptions:
   - CONOP
   - CORE
   - CORS
+  - CPA
   - CPU
   - CRIME
   - CRLF
@@ -59,9 +71,11 @@ exceptions:
   - CVE
   - CVS
   - DAG
+  - DAO
   - DAST
   - DDOS
   - DEP
+  - DEX
   - DHCP
   - DHT
   - DLL
@@ -75,12 +89,15 @@ exceptions:
   - ECDSA
   - ECS
   - EDR
+  - EEA
   - EFS
   - EKS
   - EOL
   - EPA
   - ETC
   - ETCD
+  - ETH
+  - EVM
   - EXIF
   - FAQ
   - FIFO
@@ -108,6 +125,7 @@ exceptions:
   - HIPAA
   - HMAC
   - HMP
+  - HSM
   - HSTS
   - HTML
   - HTTP
@@ -116,28 +134,40 @@ exceptions:
   - IAM
   - IANA
   - IAT
+  - IAVL
   - IBM
   - ICMP
+  - ICO
+  - ICS
   - IDA
   - IDE
   - IDOR
+  - IDS
   - IID
   - IMAP
   - IOPS
+  - IPFS
+  - IPS
   - IRC
   - IRQL
   - ISAC
   - ISN
   - ISO
+  - IUM
   - JPEG
   - JPG
   - JSON
   - JVM
   - JWT
+  - KASLR
+  - KDC
+  - KMCI
   - KVM
+  - KYC
   - LAN
   - LDAP
   - LDAPS
+  - LED
   - LESS
   - LFS
   - LRU
@@ -146,25 +176,36 @@ exceptions:
   - LUKS
   - MAC
   - MBR
+  - MDL
+  - MDM
+  - MEV
   - MFA
   - MIME
   - MIT
+  - MMIO
+  - MSA
   - MSSQL
   - MVC
   - NAT
   - NDA
   - NFS
+  - NFT
+  - NGFW
   - NGINX
   - NIST
   - NOTE
   - NPM
+  - NTLM
   - NTP
+  - NVRAM
   - ONLY
+  - OPA
   - OSI
   - OSS
   - OTP
   - OTR
   - OWASP
+  - PAC
   - PAT
   - PCI
   - PCI-DSS
@@ -176,6 +217,7 @@ exceptions:
   - PGP
   - PHP
   - PNG
+  - POC
   - POSIX
   - POST
   - PPP
@@ -199,31 +241,44 @@ exceptions:
   - RPC
   - RPM
   - RPS
+  - RRA
   - RSA
   - RSS
   - RST
+  - RTL
+  - RVA
   - RVM
   - SAAS
+  - SAM
   - SAML
   - SANS
   - SAST
   - SATA
+  - SBOM
+  - SCA
+  - SCADA
   - SCIM
   - SCORE
   - SCP
   - SCSS
   - SDK
+  - SDDL
+  - SDLC
   - SDN
   - SEH
+  - SEHOP
   - SELF
   - SEO
   - SET
   - SFTP
   - SHA
   - SIEM
+  - SIP
   - SLA
   - SLSA
   - SMB
+  - SMAP
+  - SMEP
   - SMS
   - SMTP
   - SOAP
@@ -234,6 +289,7 @@ exceptions:
   - SPDX
   - SPF
   - SPICE
+  - SPN
   - SQL
   - SSD
   - SSG
@@ -242,13 +298,16 @@ exceptions:
   - SSO
   - SSRF
   - SSTI
+  - SUID
   - SVG
   - SVN
   - SYN
   - TBA
   - TBD
+  - TCC
   - TCP
   - TEE
+  - TGT
   - TIFF
   - TIP
   - TLD
@@ -264,15 +323,22 @@ exceptions:
   - URL
   - USB
   - UTC
+  - UTM
   - UTF
   - UUID
+  - VBS
   - VCS
+  - VHD
   - VLAN
   - VNC
   - VPC
   - VPN
+  - VSS
   - WAF
+  - WHQL
   - WIP
+  - WMIC
+  - WPAD
   - WSDL
   - WSL
   - XDR

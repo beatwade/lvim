@@ -159,16 +159,16 @@ M.config = function()
       ft = "markdown",
     },
     {
-      "simrat39/rust-tools.nvim",
-      lazy = true,
-      config = function()
+      "mrcjkb/rustaceanvim",
+      version = "^3",
+      init = function()
         require("user.rust_tools").config()
       end,
       ft = { "rust", "rs" },
       enabled = lvim.builtin.rust_programming.active,
     },
     {
-      url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+      "abzcoding/lsp_lines.nvim",
       lazy = true,
       config = function()
         require("lsp_lines").setup()
@@ -758,8 +758,7 @@ M.config = function()
       enabled = lvim.builtin.python_programming.active,
     },
     {
-      "phaazon/mind.nvim",
-      branch = "v2.2",
+      "Selyss/mind.nvim",
       dependencies = { "nvim-lua/plenary.nvim" },
       config = function()
         require("user.mind").config()
@@ -829,6 +828,14 @@ M.config = function()
       name = "new-indent",
       main = "ibl",
       enabled = lvim.builtin.indentlines.mine,
+    },
+    {
+      "Wansmer/symbol-usage.nvim",
+      event = "LspAttach",
+      enabled = lvim.builtin.symbols_usage.active,
+      config = function()
+        require("user.symbol_use").config()
+      end,
     },
   }
 end

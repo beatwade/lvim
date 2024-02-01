@@ -23,7 +23,9 @@ M.config = function()
   -- NOTE: custom icons doesn't work with nerd font v3 yet
   lvim.builtin.custom_web_devicons = false
   lvim.use_icons = true -- only set to false if you know what are you doing
-  lvim.builtin.sell_your_soul_to_devil = { active = true, prada = false }
+  lvim.builtin.sell_your_soul_to_devil.active = true
+  lvim.builtin.sell_your_soul_to_devil.prada = false
+  -- lvim.builtin.sell_your_soul_to_devil.openai = true -- NOTE: requires valid OPENAI_API_KEY environment variable
   lvim.lsp.document_highlight = false
   lvim.builtin.task_runner = "async_tasks"
   lvim.builtin.dap.active = true
@@ -50,10 +52,10 @@ M.config = function()
   lvim.builtin.borderless_cmp = true
   lvim.builtin.colored_args = true
   lvim.reload_config_on_save = false -- NOTE: i don't like this
-  lvim.builtin.mind.active = false
+  lvim.builtin.mind.active = true
   lvim.builtin.motion_provider = "flash"
   lvim.builtin.harpoon.active = true
-  lvim.builtin.sell_your_soul_to_devil.openai = true -- NOTE: requires valid OPENAI_API_KEY environment variable
+  lvim.builtin.symbols_usage.active = true
   -- require("lvim.lsp.manager").setup("prosemd_lsp", {})
 end
 

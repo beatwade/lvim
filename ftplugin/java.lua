@@ -23,7 +23,10 @@ end
 
 -- Find root of project
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
-local root_dir = require("jdtls.setup").find_root(root_markers)
+-- https://github.com/mfussenegger/nvim-jdtls
+-- local root_dir = require("jdtls.setup").find_root(root_markers)
+-- for big java project with parent module structure 
+local root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
 if root_dir == "" then
   return
 end

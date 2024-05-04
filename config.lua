@@ -9,7 +9,7 @@ vim.lsp.set_log_level "error"
 lvim.log.level = "warn"
 require("user.neovim").config()
 lvim.lsp.code_lens_refresh = true
-lvim.lsp.installer.setup.automatic_installation = false
+lvim.lsp.installer.setup.automatic_installation = true
 
 -- Customization
 -- =========================================
@@ -25,7 +25,7 @@ lvim.builtin.fancy_wild_menu = { active = false } -- enable/disable cmp-cmdline
 lvim.builtin.fancy_diff = { active = false } -- enable/disable fancier git diff
 lvim.builtin.lua_dev = { active = true } -- change this to enable/disable folke/lua_dev
 lvim.builtin.test_runner = { active = true, runner = "ultest" } -- change this to enable/disable ultest or neotest
-lvim.builtin.cheat = { active = false } -- enable/disable cheat.sh integration
+lvim.builtin.cheat = { active = true } -- enable/disable cheat.sh integration
 lvim.builtin.sql_integration = { active = false } -- use sql integration
 lvim.builtin.smooth_scroll = "" -- for smoth scrolling, can be "cinnamon", "neoscroll" or ""
 lvim.builtin.neoclip = { active = true, enable_persistent_history = false }
@@ -63,8 +63,8 @@ lvim.builtin.indentlines.active = true
 lvim.builtin.noice = { active = false } -- enables noice.nvim and inc-rename.nvim
 lvim.builtin.go_programming = { active = false } -- gopher.nvim + nvim-dap-go
 lvim.builtin.python_programming = { active = true } -- swenv.nvim + nvim-dap-python + requirements.txt.vim
-lvim.builtin.web_programming = { active = false } -- typescript.nvim + package-info.nvim
-lvim.builtin.rust_programming = { active = false } -- rust_tools.nvim + crates.nvim
+lvim.builtin.web_programming = { active = true } -- typescript.nvim + package-info.nvim
+lvim.builtin.rust_programming = { active = true } -- rust_tools.nvim + crates.nvim
 lvim.builtin.cpp_programming = { active = false } -- clangd_extensions.nvim + make-tools.nvim
 lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.borderless_cmp = false
@@ -148,3 +148,4 @@ require("user.autocommands").config()
 -- Additional Keybindings
 -- =========================================
 require("user.keybindings").config()
+

@@ -12,6 +12,7 @@ if #launcher_path == 0 then
   launcher_path = vim.fn.glob(mason_path .. "/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar", true, true)[1]
 end
 local CONFIG = "linux"
+local WORKSPACE_PATH = home .. "/workspace/"
 if vim.fn.has "mac" == 1 then
   WORKSPACE_PATH = home .. "/workspace/"
   CONFIG = "mac"
@@ -23,7 +24,10 @@ end
 
 -- Find root of project
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
-local root_dir = require("jdtls.setup").find_root(root_markers)
+-- https://github.com/mfussenegger/nvim-jdtls
+-- local root_dir = require("jdtls.setup").find_root(root_markers)
+-- for big java project with parent module structure 
+local root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1])
 if root_dir == "" then
   return
 end

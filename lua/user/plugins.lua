@@ -159,16 +159,16 @@ M.config = function()
       ft = "markdown",
     },
     {
-      "simrat39/rust-tools.nvim",
-      lazy = true,
-      config = function()
+      "mrcjkb/rustaceanvim",
+      version = "^3",
+      init = function()
         require("user.rust_tools").config()
       end,
       ft = { "rust", "rs" },
       enabled = lvim.builtin.rust_programming.active,
     },
     {
-      url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+      "abzcoding/lsp_lines.nvim",
       lazy = true,
       config = function()
         require("lsp_lines").setup()
@@ -184,7 +184,7 @@ M.config = function()
       end,
     },
     {
-      "windwp/nvim-spectre",
+      "nvim-pack/nvim-spectre",
       lazy = true,
       config = function()
         require("user.spectre").config()
@@ -242,6 +242,7 @@ M.config = function()
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "ultest"),
     },
     {
+      -- NOTE: This plugin is not maintained anymore, you might wanna use https://github.com/pmizio/typescript-tools.nvim
       "jose-elias-alvarez/typescript.nvim",
       ft = {
         "javascript",
@@ -255,7 +256,7 @@ M.config = function()
       config = function()
         require("user.tss").config()
       end,
-      enabled = lvim.builtin.web_programming.active,
+      enabled = (lvim.builtin.web_programming.active and lvim.builtin.web_programming.extra == "typescript.nvim"),
     },
     {
       "vuki656/package-info.nvim",
@@ -441,9 +442,6 @@ M.config = function()
         require("nvim-web-devicons").setup()
       end,
       enabled = lvim.builtin.custom_web_devicons or not lvim.use_icons,
-    },
-    {
-      "nvim-telescope/telescope-live-grep-args.nvim",
     },
     { "mtdl9/vim-log-highlighting", ft = { "text", "log" } },
     {
@@ -761,14 +759,108 @@ M.config = function()
       enabled = lvim.builtin.python_programming.active,
     },
     {
-      "phaazon/mind.nvim",
-      branch = "v2.2",
+      "Selyss/mind.nvim",
       dependencies = { "nvim-lua/plenary.nvim" },
       config = function()
         require("user.mind").config()
       end,
       event = "VeryLazy",
       enabled = lvim.builtin.mind.active,
+    },
+    {
+      "ibhagwan/fzf-lua",
+      config = function()
+        -- calling `setup` is optional for customization
+        local ff = require "user.fzf"
+        require("fzf-lua").setup(vim.tbl_deep_extend("keep", vim.deepcopy(ff.active_profile), ff.default_opts))
+      end,
+      enabled = not lvim.builtin.telescope.active,
+    },
+    {
+      "folke/flash.nvim",
+      event = "VeryLazy",
+      keys = require("user.flash").keys,
+      enabled = lvim.builtin.motion_provider == "flash",
+    },
+    {
+      "piersolenski/wtf.nvim",
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+      },
+      event = "VeryLazy",
+      opts = {
+        popup_type = "vertical",
+      },
+      keys = {
+        {
+          "gw",
+          mode = { "n" },
+          function()
+            require("wtf").ai()
+          end,
+          desc = "Debug diagnostic with AI",
+        },
+        {
+          mode = { "n" },
+          "gW",
+          function()
+            require("wtf").search()
+          end,
+          desc = "Search diagnostic with Google",
+        },
+      },
+      enabled = lvim.builtin.sell_your_soul_to_devil.openai,
+    },
+    {
+      "james1236/backseat.nvim",
+      config = function()
+        require("backseat").setup {
+          highlight = {
+            icon = "󰳃 ",
+            group = "SpecialComment",
+          },
+        }
+      end,
+      event = "VeryLazy",
+      enabled = lvim.builtin.sell_your_soul_to_devil.openai,
+    },
+    {
+      "lukas-reineke/indent-blankline.nvim",
+      name = "new-indent",
+      main = "ibl",
+      enabled = lvim.builtin.indentlines.mine,
+    },
+    {
+      "Wansmer/symbol-usage.nvim",
+      event = "LspAttach",
+      enabled = lvim.builtin.symbols_usage.active,
+      config = function()
+        require("user.symbol_use").config()
+      end,
+    },
+    {
+      "hedyhli/outline.nvim",
+      config = function()
+        require("user.outline").config()
+      end,
+      event = "BufReadPost",
+      enabled = lvim.builtin.tag_provider == "outline",
+    },
+    {
+      "pmizio/typescript-tools.nvim",
+      ft = {
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+      },
+      lazy = true,
+      config = function()
+        require("user.typtools").config()
+      end,
+      enabled = (lvim.builtin.web_programming.active and lvim.builtin.web_programming.extra == "typescript-tools.nvim"),
     },
   }
 end
